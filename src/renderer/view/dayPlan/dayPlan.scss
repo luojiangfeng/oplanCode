@@ -1,0 +1,13 @@
+$c-table:#ccc;
+.day-plan-list{
+	width: 100%;
+
+	.el-row{
+		height: 180px;
+		border: 1px solid $c-table;
+
+		&.thead{
+			height: 30px;
+		}
+	}
+}

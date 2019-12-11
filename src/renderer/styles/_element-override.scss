@@ -1,0 +1,95 @@
+/*================================= 主题 ===============================*/
+
+/* 改变主题色变量 */
+$--color-primary: $c-m;
+
+
+
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "~element-ui/packages/theme-chalk/src/index";
+
+
+/*================================= 重写class ===============================*/
+.__view {
+    height: 100% !important;
+}
+
+.__rail-is-vertical {
+    z-index: 10 !important;
+}
+
+.el-popover-table-data {
+    margin-bottom: 3px !important;
+    min-width: 50px;
+    padding: 5px;
+}
+
+.el-message {
+    top: $topNavH + 20 !important;
+}
+
+.theme-picker-dropdown {
+    z-index: $z-max-top !important;
+    // top: $topNavH + 3 !important;
+
+    // .el-color-svpanel {
+    //     position: relative;
+
+    //     &>:first-child:before {
+    //         position: absolute;
+    //         top: -22px;
+    //         left: 50%;
+    //         translate: 50%;
+    //         font-family: "iconfont" !important;
+    //         content: "\e659";
+    //         color: #fff;
+    //         font-size: 25px;
+    //     }
+    // }
+
+    .el-button--text {
+        display: none;
+    }
+
+}
+
+.el-drawer.rtl {
+    width: 260px !important;
+    padding: 20px;
+    padding-top: 50px;
+
+    .el-drawer__header span,
+    .el-drawer__close-btn {
+        outline: none !important;
+    }
+
+    .el-drawer__body {
+        padding-left: 20px;
+    }
+
+}
+
+
+
+.log-detail-pop {
+    width: 750px;
+
+    .el-message-box__title {
+        padding-top: 10px;
+        font-weight: bold;
+        color: $c-m;
+        text-align: center;
+
+        span {
+            font-size: 16px;
+        }
+    }
+
+    .el-message-box__message {
+        max-height: 78vh;
+        overflow-y: auto;
+    }
+}

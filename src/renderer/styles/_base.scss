@@ -1,0 +1,384 @@
+//reset
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 14px;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q,
+blockquote {
+  quotes: none;
+}
+
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+//
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  /*保证footer始终在底部*/
+  height: 100%;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  outline: 0 none;
+  cursor: pointer;
+}
+
+.page {
+  height: 100%;
+}
+
+/*================================= 便捷 ===============================*/
+.show {
+  display: block !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:after {
+  display: block;
+  height: 0;
+  content: " ";
+  font-size: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.c-red {
+  color: $c-red;
+}
+
+/*================================= 公用 ===============================*/
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+.each-page {
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  // min-height: 600px;
+  // margin: 0 30px;
+
+  .page-top {
+    position: absolute;
+    top: -36px;
+    left: 16px;
+    display: flex;
+    z-index: 10;
+    // position: relative;
+    // height: 20vh;
+
+    .page-top-nav {
+      $c: rgba(255, 255, 255, 0.9);
+      @extend %clearfix;
+
+      li {
+        float: left;
+        margin-right: 15px;
+
+        &.on a {
+          color: #fff;
+          background: rgba(255, 255, 255, 0.36);
+        }
+      }
+
+      a {
+        font-size: 14px;
+        display: block;
+        padding: 4px 12px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 3px;
+        color: $c;
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+
+  .main-inner-cont {
+    flex: 1;
+    position: relative;
+    padding: 20px;
+    min-height: 500px;
+    min-width: 900px;
+    background: #fff;
+    border: 1px solid #e5eaee;
+    box-shadow: 0 0 3px #e9eef4;
+
+    .page-handle {
+      position: absolute;
+      right: 16px;
+      top: -35px;
+    }
+  }
+}
+
+/*fade*/
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.28s;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0.8;
+}
+
+/*breadcrumb transition*/
+.breadcrumb-enter-active,
+.breadcrumb-leave-active {
+  transition: all 0.5s;
+}
+
+.breadcrumb-enter,
+.breadcrumb-leave-active {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.breadcrumb-move {
+  transition: all 0.5s;
+}
+
+.breadcrumb-leave-active {
+  position: absolute;
+}
+
+//wangEditor
+.editor-modul {
+  h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    margin: 0.75em 0;
+  }
+
+  h3 {
+    font-size: 1.17em;
+    margin: 0.83em 0;
+  }
+
+  h4 {
+    margin: 1.12em 0;
+  }
+
+  h5 {
+    font-size: 0.83em;
+    margin: 1.5em 0;
+  }
+
+  h6 {
+    font-size: 0.75em;
+    margin: 1.67em 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  b,
+  strong {
+    font-weight: bolder;
+  }
+}
+
+.iconfont-mood {
+  display: inline-block;
+  user-select: none;
+  color: $c-blue-light;
+
+  &.type2 {
+    color: $c-red-light;
+  }
+
+  &.type0 {
+    color: #666;
+  }
+}
+
+/*================================= 常用 ===============================*/
+.safe-w {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+#dd {
+  background: blue;
+}
+
+#cc {
+  background: yellow;
+}
+
+.order-num {
+  display: inline-block;
+
+  width: 1.2em;
+  height: 1.2em;
+  text-align: center;
+  line-height: 1em;
+  border-radius: 50%;
+  border: 1px solid #000;
+}

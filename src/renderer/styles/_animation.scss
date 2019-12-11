@@ -1,0 +1,65 @@
+//动画
+.flash{
+    animation:flash 2.5s  ease  forwards  infinite;
+    &:hover{
+    	animation:none;
+    	filter:brightness(1.2)  sepia(.1);
+    }
+
+    &.flash1{
+        animation:flashMid 2s  ease  forwards  infinite;
+    }
+
+    &.flash2{
+        animation:flashMid 2s 1s ease  forwards  infinite;
+    }
+}
+.flashMore{
+    animation:flashMore 2.5s  ease  forwards  infinite;
+    
+}
+
+@keyframes flash {
+    0% {
+        filter:brightness(.95);
+        opacity:.95;
+    }
+    50% {
+       filter:brightness(1.1);
+        opacity:1;
+    }
+    100% {
+       filter:brightness(.95);
+        opacity:.95;
+    }
+}
+
+@keyframes flashMid {
+    0% {
+        filter:brightness(.92);
+        opacity:.95;
+    }
+    50% {
+       filter:brightness(1.18);
+        opacity:1;
+    }
+    100% {
+       filter:brightness(.92);
+        opacity:.95;
+    }
+}
+
+@keyframes flashMore {
+    0% {
+        filter:brightness(.8);
+        opacity:.9;
+    }
+    50% {
+       filter:brightness(1.2);
+        opacity:1;
+    }
+    100% {
+       filter:brightness(.8);
+        opacity:.9;
+    }
+}

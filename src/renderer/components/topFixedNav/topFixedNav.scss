@@ -1,0 +1,93 @@
+.top-fixed-nav {
+    $cnt-c: #a3a5a8;
+    $icon-size: 15px;
+    $margin-top: 8px;
+
+    z-index: $z-fixed-top;
+    position: fixed;
+
+    top: 0;
+    width: 100%;
+    height: $topNavH;
+    opacity: 1;
+
+    background: #222226;
+    border-bottom: 1px solid #000;
+    border-image: linear-gradient(to right,
+            rgb(202, 202, 202),
+            rgb(228, 228, 228),
+            rgb(192, 192, 192)) 20 20;
+
+    // &::after {
+    //     position: absolute;
+    //     z-index: 1;
+    //     top: 0;
+    //     left: 0;
+    //     content: '';
+    //     width: 100%;
+    //     height: 100%;
+    //     background: linear-gradient(-60deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)) !important;
+    // }
+
+    &::after {
+        z-index: 2;
+    }
+
+    .inner {
+        z-index: 10;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    h1 {
+        margin-left: 13px;
+        margin-top: 7px;
+        opacity: 0.8;
+        width: 80px;
+        @include bg("logo-white.png");
+    }
+
+    .right {
+        display: flex;
+        padding-right: 8px;
+    }
+
+    .btn {
+        -webkit-app-region: no-drag;
+        box-sizing: content-box;
+        color: $cnt-c;
+        margin-right: 5px;
+        display: inline-block;
+        line-height: $topNavH;
+
+        padding: 2px;
+        font-size: $icon-size;
+    }
+
+    .winOperation {
+        margin-left: 25px;
+
+        .btn {
+            color: darken($cnt-c, 15%);
+        }
+    }
+
+    .userOpertion {
+        display: flex;
+        justify-content: flex-end;
+
+        &>.btn {
+            margin-left: 6px;
+            font-size: $icon-size + 4;
+        }
+
+        .change-color {
+            margin-top: 5px;
+        }
+
+
+
+
+    }
+}

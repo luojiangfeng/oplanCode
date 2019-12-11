@@ -1,0 +1,28 @@
+@import './var.scss';
+@import './mixin.scss';
+
+/* 自定义class应用theme主题(提高换肤时的性能,不能遍历更改全局css),混入到style.css */
+
+$element-deault-c:#409EFF;
+
+.theme-c {
+  color: $element-deault-c !important;
+}
+
+.test {
+  background: #000;
+}
+
+.theme-bg {
+  background-color: $element-deault-c !important;
+}
+
+.theme-gradient {
+  background-color: $element-deault-c !important;
+  background-size: cover;
+}
+
+
+.theme-gradient-border {
+  border-image: linear-gradient(-60deg, darken($element-deault-c, 20%), lighten($element-deault-c, 10%), darken($element-deault-c, 20%));
+}

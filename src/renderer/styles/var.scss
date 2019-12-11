@@ -1,0 +1,57 @@
+/*================================= 颜色 ===============================*/
+$c-m:#37265C; //主色573f9b
+$c-m-dark:#3f2a7f; //主色-深3f2a7f
+$c-m-light:#ab70cf; //主色-浅
+
+$c-bg-dark:#282839; //深背景色 
+
+$c-blue-light:#99d2ff; //蓝色
+$c-blue-bg:#ebf5ff; //蓝色背景
+$c-red-light:#fd8296; //红色
+
+$c-page-bg: #ebeef3; // 页面默认背景色
+
+$c-border: #E4E9EF; // 边框色
+
+$c-font-gray: #8C98A7; // 灰 字色
+
+$yellow-color: #FFB900;
+
+
+$c-red:#ff294c;
+
+//渐变  起bf80f8  end 58419c
+
+/*================================= 间距 ===============================*/
+$topNavH:36px;
+$left-nav-w:230px;
+
+
+/*================================= 其他 ===============================*/
+$z-max-top:99999999;
+$z-fixed-top:9999999;
+
+/* 占位符 */
+%clearfix {
+  *zoom: 1;
+
+  &:before {
+    display: table;
+    line-height: 0;
+    content: "";
+  }
+
+  &:after {
+    display: table;
+    line-height: 0;
+    content: "";
+    clear: both;
+  }
+}
+
+%unselect {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

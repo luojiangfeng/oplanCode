@@ -1,0 +1,25 @@
+$c-table: #ccc;
+
+.each-section {
+  margin-bottom: 50px;
+}
+.section-title {
+  font-size: 16px;
+  color: #666;
+  padding-bottom: 15px;
+}
+
+.upload-img-wrap {
+  margin-top: 20px;
+  width: 120px;
+  height: 120px;
+  border: 1px solid #eee;
+}
+
+.upload-img {
+  display: block;
+  height: 100%;
+  width: auto;
+  max-width: 120px;
+  margin: 0 auto;
+}
