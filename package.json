@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "axios": "^0.16.1",
-    "electron": "^1.8.8",
+    "electron": "^15.5.5",
     "element-ui": "^2.4.6",
     "formidable": "^1.2.1",
     "nedb": "^1.8.0",
